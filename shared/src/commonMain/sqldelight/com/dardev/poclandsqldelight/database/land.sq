@@ -1,0 +1,7 @@
+CREATE TABLE userLand (
+  user_number INTEGER PRIMARY KEY NOT NULL,
+  full_name TEXT NOT NULL
+);
+
+INSERT INTO userLand (user_number, full_name)
+VALUES (15, 'Darren Lambert');
