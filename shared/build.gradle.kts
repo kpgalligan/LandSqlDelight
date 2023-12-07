@@ -2,7 +2,7 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.kotlinCocoapods)
     alias(libs.plugins.androidLibrary)
-    id("app.cash.sqldelight") version "2.0.1"
+    alias(libs.plugins.sqldelight)
 }
 
 kotlin {
@@ -37,16 +37,16 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             //put your multiplatform dependencies here
-            implementation("app.cash.sqldelight:runtime:2.0.1")
+            implementation(libs.sqldelight.runtime)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
         }
         androidMain.dependencies {
-            implementation("app.cash.sqldelight:android-driver:2.0.1")
+            implementation(libs.sqldelight.driver.android)
         }
         iosMain.dependencies {
-            implementation("app.cash.sqldelight:native-driver:2.0.1")
+            implementation(libs.sqldelight.driver.native)
         }
     }
 }

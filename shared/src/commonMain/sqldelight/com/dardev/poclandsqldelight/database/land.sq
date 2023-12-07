@@ -5,3 +5,6 @@ CREATE TABLE userLand (
 
 INSERT INTO userLand (user_number, full_name)
 VALUES (15, 'Darren Lambert');
+
+selectAll:
+SELECT * FROM userLand;
